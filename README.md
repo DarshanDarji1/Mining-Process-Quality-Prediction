@@ -1,10 +1,12 @@
+
+
 # ⛏️ Mining Process Quality Prediction
 
 ## 📌 Project Overview
 
 Mining Process Quality Prediction is a Machine Learning project developed to predict the percentage of silica concentrate produced during the flotation process in a mining plant.
 
-The project analyzes operational parameters such as iron feed, silica feed, air flow, flotation column levels, ore pulp properties, and chemical flow to estimate the final silica concentration. A Random Forest Regression model is used to provide accurate predictions, while Streamlit offers an interactive web application for users and Power BI provides business-oriented dashboard visualizations.
+The project analyzes operational parameters such as iron feed, silica feed, air flow, flotation column levels, ore pulp properties, and chemical flow to estimate the final silica concentration. The project analyzes operational parameters such as iron feed, silica feed, air flow, flotation column levels, ore pulp properties, and chemical flow to estimate the final silica concentration. An XGBoost Regression model is used to provide accurate predictions, while Streamlit offers an interactive web application and Power BI provides business-oriented dashboard visualizations.
 
 ---
 
@@ -15,6 +17,17 @@ The project analyzes operational parameters such as iron feed, silica feed, air 
 - Reduce manual analysis of flotation parameters.
 - Provide an easy-to-use prediction interface.
 - Visualize operational insights using Power BI dashboards.
+
+  ## ⭐ Features
+
+- Complete Machine Learning Pipeline
+- Data Preprocessing
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Model Comparison
+- Streamlit Web Application
+- Power BI Dashboard
+- Prediction Visualization
 
 ---
 
@@ -48,9 +61,10 @@ The dataset contains operational data collected from a mining flotation plant, i
 - Date & Time Features
 
 **Target Variable:**
+> 
 
 - **% Silica Concentrate**
-
+**Note:** The original dataset is not included in this repository because it exceeds GitHub's file size limit. Place the dataset inside the `data/` folder before running the project.
 ---
 
 ## 📁 Project Structure
@@ -67,10 +81,35 @@ Mining_Process_Quality_Prediction/
 ├── images/
 ├── models/
 ├── outputs/
-├── reports/
+
 └── src/
 ```
+## 🚀 Installation
 
+Clone the repository:
+
+```bash
+git clone https://github.com/DarshanDarji1/Mining-Process-Quality-Prediction.git
+```
+
+Go to the project folder:
+
+```bash
+cd Mining-Process-Quality-Prediction
+```
+
+Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the application:
+
+```bash
+
+streamlit run app.py
+```
 ---
 
 ## 🔄 Machine Learning Workflow
@@ -93,7 +132,7 @@ The project follows a complete Machine Learning pipeline:
 4. **Model Training**
    - Trained multiple regression models.
    - Compared their performance.
-   - Selected the Random Forest Regressor as the final model.
+   - Selected the XGBoost Regressor as the final model.
 
 5. **Model Evaluation**
    - Evaluated the model using standard regression metrics.
@@ -107,19 +146,24 @@ The project follows a complete Machine Learning pipeline:
 
 ## 🤖 Machine Learning Model
 
-**Selected Algorithm**
+The project compares multiple regression algorithms including:
 
-- Random Forest Regressor
+- Linear Regression
+- Decision Tree Regressor
+- XGBoost Regressor
 
-### Model Performance
+The trained model is saved using Joblib and integrated into the Streamlit application for prediction.
+---
+## 📈 Results
 
-| Metric | Value |
-|---------|-------|
-| R² Score | 0.9953 |
-| Mean Absolute Error (MAE) | 0.15 |
+The machine learning model successfully predicts the silica concentrate percentage using mining process parameters.
 
-The Random Forest model achieved excellent prediction accuracy on the processed mining dataset and was selected as the final model for deployment.
+The project includes:
 
+- Model Comparison
+- Actual vs Predicted Visualization
+- Power BI Dashboard
+- Streamlit Prediction Interface
 ---
 
 ## 🚀 Streamlit Application Features
@@ -173,7 +217,7 @@ Possible improvements for this project include:
 
 ## 👨‍💻 Author
 
-**Developer:** DD
+**Developer:** Darshan Darji
 
 **Project:** Mining Process Quality Prediction
 
