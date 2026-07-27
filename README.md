@@ -6,7 +6,7 @@
 
 Mining Process Quality Prediction is a Machine Learning project developed to predict the percentage of silica concentrate produced during the flotation process in a mining plant.
 
-The project analyzes operational parameters such as iron feed, silica feed, air flow, flotation column levels, ore pulp properties, and chemical flow to estimate the final silica concentration. The project analyzes operational parameters such as iron feed, silica feed, air flow, flotation column levels, ore pulp properties, and chemical flow to estimate the final silica concentration. An XGBoost Regression model is used to provide accurate predictions, while Streamlit offers an interactive web application and Power BI provides business-oriented dashboard visualizations.
+The project analyzes operational parameters such as iron feed, silica feed, air flow, flotation column levels, ore pulp properties, and chemical flow to estimate the final silica concentration. The project analyzes operational parameters such as iron feed, silica feed, air flow, flotation column levels, ore pulp properties, and chemical flow to estimate the final silica concentration. An Decision Tree Regressor model is used to provide accurate predictions, while Streamlit offers an interactive web application and Power BI provides business-oriented dashboard visualizations.
 
 ---
 
@@ -132,7 +132,7 @@ The project follows a complete Machine Learning pipeline:
 4. **Model Training**
    - Trained multiple regression models.
    - Compared their performance.
-   - Selected the XGBoost Regressor as the final model.
+   - Selected the Decision Tree Regressor as the final model.
 
 5. **Model Evaluation**
    - Evaluated the model using standard regression metrics.
@@ -150,7 +150,6 @@ The project compares multiple regression algorithms including:
 
 - Linear Regression
 - Decision Tree Regressor
-- XGBoost Regressor
 
 The trained model is saved using Joblib and integrated into the Streamlit application for prediction.
 ---

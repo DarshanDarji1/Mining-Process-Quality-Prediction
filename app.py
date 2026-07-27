@@ -31,9 +31,9 @@ MODEL_PATH = BASE_DIR / "models" / "mining_model.pkl"
 
 model = joblib.load(MODEL_PATH)
 
-MODEL_R2 = 0.9953
-MODEL_MAE = 0.15
-MODEL_NAME = "Random Forest Regressor"
+MODEL_R2 = 0.8981
+MODEL_MAE = 0.0834
+MODEL_NAME = "Decision Tree Regressor"
 
 # ---------------------------------------------------
 # Title
@@ -63,7 +63,7 @@ st.sidebar.success("✅ Model Loaded")
 
 st.sidebar.markdown("""
 ### 🤖 Algorithm
-Random Forest Regressor
+Decision Tree Regressor
 
 ### 🎯 Target
 % Silica Concentrate
@@ -206,7 +206,14 @@ if predict:
     with st.expander("📋 View Input Parameters"):
             st.dataframe(input_data, use_container_width=True)
 
+    st.write("Columns sent to model:")
+    st.write(input_data.columns.tolist())
     prediction = model.predict(input_data)[0]
+    st.write("Input sent to model:")
+    st.dataframe(input_data)
+
+    st.write("Prediction:")
+    st.write(prediction)
 
     st.markdown("---")
 
@@ -262,7 +269,7 @@ st.markdown("---")
 with st.expander("ℹ️ About This Project"):
 
     st.write("""
-This application predicts the percentage of silica concentrate in a mining flotation process using a Random Forest Regression model.
+This application predicts the percentage of silica concentrate in a mining flotation process using a Decision Tree Regression model.
 
 ### Technologies Used
 - Python

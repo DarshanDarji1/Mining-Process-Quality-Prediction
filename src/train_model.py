@@ -176,6 +176,17 @@ model_path = MODEL_DIR / "mining_model.pkl"
 
 joblib.dump(best_model, model_path)
 
+print("\nFeature Importance")
+
+importance = pd.DataFrame({
+    "Feature": X.columns,
+    "Importance": best_model.feature_importances_
+})
+
+importance = importance.sort_values("Importance", ascending=False)
+
+print(importance)
+
 print("Model Saved Successfully.")
 
 # -----------------------------------------------------
