@@ -1,0 +1,19 @@
+# Virtual Environment
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Environment
+.env
+
+# Large datasets
+data/*.csv
+
+# Installer files
+*.exe
