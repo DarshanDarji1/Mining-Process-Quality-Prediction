@@ -194,11 +194,11 @@ The Power BI dashboard includes:
 
 ### Streamlit Application
 
-> Add a screenshot of the Streamlit prediction dashboard here.
+![Streamlit App](images/streamlit_app.png)
 
 ### Power BI Dashboard
 
-> Add a screenshot of the Power BI dashboard here.
+>![Power BI dashboard](images/powerbi_dashboard.png)
 
 ---
 
